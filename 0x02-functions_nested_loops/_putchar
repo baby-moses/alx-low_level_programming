@@ -1,1 +1,1 @@
-int _isalpha(int c);
+int add(int, int);
