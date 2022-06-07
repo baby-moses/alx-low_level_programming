@@ -1,30 +1,41 @@
-#include <studio.h>
-int main(void)                                                                                                                          
+#include "main.h"
 
-{                                                                                                                                       
 
-        _putchar('H');                                                                                                                  
 
-        _putchar('o');                                                                                                                  
+/**
 
-        _putchar('l');                                                                                                                  
+ * main - Entry point.
 
-        _putchar('b');                                                                                                                  
+ * Description: write a program that prints "_putchar" followed by a new line.
 
-        _putchar('e');                                                                                                                  
+ * Return: Always 0 (Success.)
 
-        _putchar('r');                                                                                                                  
+ */
 
-        _putchar('t');                                                                                                                  
+int main(void)
 
-        _putchar('o');                                                                                                                  
+{
 
-        _putchar('n');                                                                                                                  
+	_putchar('_');
 
-        _putchar('\n');                                                                                                                 
+	_putchar('p');
 
-                                                                                                                                        
+	_putchar('u');
 
-        return (0);                                                                                                                     
+	_putchar('t');
 
-} 
+	_putchar('c');
+
+	_putchar('h');
+
+	_putchar('a');
+
+	_putchar('r');
+
+	_putchar('\n');
+
+
+
+	return (0);
+
+}
