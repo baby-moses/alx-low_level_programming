@@ -1,26 +1,23 @@
+int _putchar(char c);
+
+int _isupper(int c);
+
+int _isdigit(int c);
+
+int mul(int a, int b);
+
 void print_numbers(void);
-#include <unistd.h>
 
+void print_most_numbers(void);
 
+void more_numbers(void);
 
-/**
+void print_line(int n);
 
- * _putchar - writes the character c to stdout
+void print_diagonal(int n);
 
- * @c: The character to print
+void print_square(int size);
 
- *
+void print_triangle(int size);
 
- * Return: On success 1.
-
- * On error, -1 is returned, and errno is set appropriately.
-
- */
-
-int _putchar(char c)
-
-{
-
-	return (write(1, &c, 1));
-
-}
+void print_number(int n);
