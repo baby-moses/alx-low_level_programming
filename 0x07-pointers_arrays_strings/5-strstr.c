@@ -1,22 +1,34 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
+  * _strstr - locate a substring
+  * @haystack: the string to search
+  * @needle: the string to find
+  *
+  * Return: char value
+  */
+char *_strstr(char *haystack, char *needle)
 {
-char board[8][8] = {
-{'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
-{'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
-{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-{'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
-{'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
-};
-print_chessboard(board);
-return (0);
+	int a = 0, b = 0;
+
+	while (haystack[a])
+	{
+		while (needle[b])
+		{
+			if (haystack[a + b] != needle[b])
+			{
+				break;
+			}
+
+			b++;
+		}
+
+		if (needle[b] == '\0')
+		{
+			return (haystack + a);
+		}
+
+		a++;
+	}
+
+	return ('\0');
 }
