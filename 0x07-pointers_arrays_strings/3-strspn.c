@@ -1,18 +1,31 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
+  * _strspn - search a string for a set of bytes
+  * @s: source string
+  * @accept: accepted string
+  *
+  * Return: number of bytes in the init segment
+  */
+unsigned int _strspn(char *s, char *accept)
 {
-    char *s = "hello, world";
-    char *f = "oleh";
-    unsigned int n;
+	unsigned int a = 0, b, t = 0;
 
-    n = _strspn(s, f);
-    printf("%u\n", n);
-    return (0);
+	while (accept[a])
+	{
+		b = 0;
+
+		while (s[b] != 32)
+		{
+			if (accept[a] == s[b])
+			{
+				t++;
+			}
+
+			b++;
+		}
+
+		a++;
+	}
+
+	return (t);
 }
