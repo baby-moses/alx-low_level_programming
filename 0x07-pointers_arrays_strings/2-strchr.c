@@ -1,20 +1,28 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
+  * _strchr - locate character in string
+  * @s: source string
+  * @c: character to find
+  *
+  * Return: the string from character found
+  */
+char *_strchr(char *s, char c)
 {
-    char *s = "hello";
-    char *f;
+	int a = 0, b;
 
-    	f = _strchr(s, 'l');
-	if (f != NULL)
-    	{
-        	printf("%s\n", f);
-    	}
-    	return (0);
+	while (s[a])
+	{
+		a++;
+	}
+
+	for (b = 0; b <= a; b++)
+	{
+		if (c == s[b])
+		{
+			s += b;
+			return (s);
+		}
+	}
+
+	return ('\0');
 }
