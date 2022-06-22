@@ -1,4 +1,6 @@
 #include "main.h"
+
+
 /**
  * sqtRecursive - computes square root recursively doing binary search
  * @start: inital number
@@ -7,8 +9,10 @@
  * Return: 1 if not found sqrroot, else sqrroot
  **/
 int sqtRecursive(int start, int end, int m)
+
 {
 	long mid;
+
 	if (end >= start)
 	{
 		mid = start + (end - start) / 2;
@@ -18,7 +22,7 @@ int sqtRecursive(int start, int end, int m)
 		if (mid * mid > m)
 			return (sqtRecursive(start, mid - 1, m));
 		if (mid * mid < m)
-			return (sqtRecursive(mid + 1, end, m));
+		return (sqtRecursive(mid + 1, end, m));
 	}
 	return (-1);
 }
